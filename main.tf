@@ -1,13 +1,17 @@
 terraform {
-  required_version = ">= 1.6.0"
-
   backend "s3" {
-    bucket = var.s3_bucket
-    key    = var.state_file_key
-    region = var.aws_region
+    # These keys must match the ones in backend.tfvars
+    bucket = ""
+    key    = ""
+    region = ""
   }
 }
 
+# Your actual infrastructure starts below
 provider "aws" {
   region = var.aws_region
+}
+
+resource "aws_s3_bucket" "example" {
+  bucket = var.s3_bucket
 }
