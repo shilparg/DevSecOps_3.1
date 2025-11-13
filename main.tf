@@ -1,10 +1,5 @@
 terraform {
-  backend "s3" {
-    # These keys must match the ones in backend.tfvars
-    bucket = ""
-    key    = ""
-    region = ""
-  }
+  backend "s3" {}
 }
 
 # Your actual infrastructure starts below
