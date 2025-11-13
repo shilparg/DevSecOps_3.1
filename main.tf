@@ -1,4 +1,6 @@
 terraform {
+  required_version = ">= 1.6.0"
+
   backend "s3" {
     bucket = var.s3_bucket
     key    = var.state_file_key
@@ -7,7 +9,5 @@ terraform {
 }
 
 provider "aws" {
-  region     = var.aws_region
-  access_key = var.aws_access_key
-  secret_key = var.aws_secret_key
+  region = var.aws_region
 }

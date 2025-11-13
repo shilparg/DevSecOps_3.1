@@ -1,3 +1,4 @@
+# ─── AWS Provider Configuration ─────────────────────────────
 variable "aws_region" {
   description = "AWS region to deploy resources"
   type        = string
@@ -15,6 +16,7 @@ variable "aws_secret_key" {
   sensitive   = true
 }
 
+# ─── Terraform Backend Configuration ────────────────────────
 variable "s3_bucket" {
   description = "S3 bucket for Terraform state"
   type        = string
