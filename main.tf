@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
     # These keys must match the ones in backend.tfvars
-    bucket = ""
-    key    = ""
-    region = ""
+    s3_bucket = ""
+    state_file_key    = ""
+    aws_region = ""
   }
 }
 
