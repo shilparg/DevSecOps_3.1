@@ -37,6 +37,14 @@ jobs:
           echo 'key    = "devsecops/terraform.tfstate"' >> backend.tfvars
           echo 'region = "us-east-1"' >> backend.tfvars
 
+      # - name: Create terraform.tfvars
+      #   run: |
+      #     echo 'aws_region = "us-east-1"' > terraform.tfvars
+      #     echo 's3_bucket = "sctp-ce11-tfstate"' >> terraform.tfvars
+      #     echo 'state_file_key = "devsecops/terraform.tfstate"' >> terraform.tfvars
+      #     echo 'environment = "dev"' >> terraform.tfvars
+      #     echo 'instance_type = "t2.micro"' >> terraform.tfvars
+
       - name: List files
         run: ls -l
 
