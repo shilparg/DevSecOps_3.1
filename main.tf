@@ -7,7 +7,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_s3_bucket" "example" {
-  bucket = var.s3_bucket
-}
+# resource "aws_s3_bucket" "example" {
+#   bucket = var.s3_bucket
+# }
 
