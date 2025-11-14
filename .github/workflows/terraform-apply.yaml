@@ -25,6 +25,12 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
 
+      - name: Create backend config
+        run: |
+          echo 'bucket = "sctp-ce11-tfstate"' > backend.tfvars
+          echo 'key    = "devsecops/terraform.tfstate"' >> backend.tfvars
+          echo 'region = "us-east-1"' >> backend.tfvars
+
       - name: List files
         run: ls -l
 
