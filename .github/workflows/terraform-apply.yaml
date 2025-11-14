@@ -25,6 +25,9 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
 
+      - name: List files
+        run: ls -l
+
       - name: Terraform Init
         run: terraform init -backend-config=backend.tfvars
 
