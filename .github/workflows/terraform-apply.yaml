@@ -33,7 +33,7 @@ jobs:
 
       - name: Create backend config
         run: |
-          echo 'bucket = "sctp-ce11-tfstate"' > backend.tfvars
+          echo 'bucket = "shilpa-terraform-state-bucket"' > backend.tfvars
           echo 'key    = "devsecops/terraform.tfstate"' >> backend.tfvars
           echo 'region = "us-east-1"' >> backend.tfvars
 
