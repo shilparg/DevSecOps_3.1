@@ -32,3 +32,13 @@ variable "state_file_key" {
   description = "Path to the state file in the bucket"
   type        = string
 }
+
+variable "environment" {
+  description = "Deployment environment (e.g., dev, staging, prod)"
+  type        = string
+}
+
+variable "instance_type" {
+  description = "EC2 instance type"
+  type        = string
+}
